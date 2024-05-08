@@ -3,6 +3,7 @@ import sys
 from pathlib import Path
 import json
 
+
 def run(command: str) -> int:
     return subprocess.call(
         command,
@@ -28,13 +29,14 @@ with open(repositories_path, "r", encoding="utf-8") as f:
 
 for name, data in repositories:
     service_path = services_path / name
-    repository = data['repository']
-    branch = data.get('branch', 'master')
+    repository = data["repository"]
+    branch = data.get("branch", "master")
 
     if service_path.exists() and service_path.is_dir():
         print(f"Service {name} already cloned, skipping...")
         continue
 
-    print(f"Cloning service {name} from {repository} to {service_path}, using branch {branch}...")
+    print(
+        f"Cloning service {name} from {repository} to {service_path}, using branch {branch}..."
+    )
     run(f"git clone --branch {branch} {repository} {service_path}")
-
