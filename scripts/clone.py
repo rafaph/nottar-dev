@@ -22,7 +22,7 @@ root_path = Path(__file__).resolve().parent.parent
 services_path = root_path / "services"
 repositories_path = services_path / "repositories.json"
 
-with open(repositories_path) as f:
+with open(repositories_path, "r", encoding="utf-8") as f:
     repositories = json.load(f).items()
 
 
