@@ -1,7 +1,7 @@
+import json
 import subprocess
 import sys
 from pathlib import Path
-import json
 
 
 def run(command: str) -> int:
