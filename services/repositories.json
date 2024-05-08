@@ -1,0 +1,6 @@
+{
+    "user": {
+        "repository": "git@github.com:rafaph/nottar-user.git",
+        "branch": "master"
+    }
+}

@@ -1,0 +1,4 @@
+.idea
+.DS_Store
+/services/**
+!/services/repositories.json
